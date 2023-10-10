@@ -1,0 +1,36 @@
+﻿<Window x:Class="PasswordChecker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PasswordChecker"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="1" Grid.Column="2"  
+                   Text="Enter Password:" FontWeight="Bold" FontSize="17"
+                   Height="50" Margin="0,82,0,62"/>
+        <TextBox Grid.Row="1" Grid.Column="2" 
+                  TextWrapping="Wrap" Height="30" Margin="0,108,0,56" 
+                 Name="password"
+                 FontSize="14"/>
+        <Button Grid.Column="2" Grid.Row="1"
+                Height="20" Width="80" Margin="0,158,120,16"
+                Content="Check" FontStyle="Italic" FontWeight="DemiBold" FontSize="10" Click="Button_Click"/>
+        <TextBlock Grid.Row="2" Grid.Column="2" Name="Result" FontSize ="12" FontWeight = "Bold"/>
+    </Grid>
+</Window>
