@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Windows.UI.Xaml.Controls;
 
 namespace PasswordChecker
 {
@@ -21,15 +22,16 @@ namespace PasswordChecker
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
 
             InitializeComponent();
         }
-
+        public PasswordRevealMode PasswordRevealMode { get; set; }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            PassChecker check = new PassChecker(password.Text);
+            PassChecker check = new PassChecker(password.Password);
                 
                 Result.Text = check.CheckPassword().Trim().Replace(Environment.NewLine, "");
             if (check.isStrong)
@@ -41,6 +43,11 @@ namespace PasswordChecker
             
 
 
+        }
+
+        private void CheckBox_Changed(object sender, RoutedEventArgs e)
+        {
+           
         }
     }
 }

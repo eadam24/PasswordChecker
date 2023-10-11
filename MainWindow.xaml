@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PasswordChecker"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="500">
+        Title="MainWindow" Height="400" Width="500"
+        ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
@@ -21,16 +22,25 @@
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
+
+
         <TextBlock Grid.Row="1" Grid.Column="2"  
                    Text="Enter Password:" FontWeight="Bold" FontSize="17"
                    Height="50" Margin="0,82,0,62"/>
-        <TextBox Grid.Row="1" Grid.Column="2" 
-                  TextWrapping="Wrap" Height="30" Margin="0,108,0,56" 
-                 Name="password"
-                 FontSize="14"/>
+        <PasswordBox Grid.Row="1" Grid.Column="2" 
+                   Height="30" Margin="0,133,0,81" 
+                 Name="password" 
+                 FontSize="14" HorizontalAlignment="Left" Width="200"/>
+        <CheckBox Grid.Row="1" Grid.Column="3" 
+                  VerticalAlignment="Center" Margin="10,65,104,0"
+                  IsChecked="False" 
+                  Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"
+                  x:Name="checkBox"/>
         <Button Grid.Column="2" Grid.Row="1"
                 Height="20" Width="80" Margin="0,158,120,16"
-                Content="Check" FontStyle="Italic" FontWeight="DemiBold" FontSize="10" Click="Button_Click"/>
-        <TextBlock Grid.Row="2" Grid.Column="2" Name="Result" FontSize ="12" FontWeight = "Bold"/>
+                Content="Check" FontStyle="Italic" FontWeight="DemiBold" FontSize="10" 
+                Click="Button_Click"/>
+        <TextBlock Grid.Row="2" Grid.Column="2" Name="Result" 
+                   FontSize ="12" FontWeight = "Bold"/>
     </Grid>
 </Window>

@@ -9,7 +9,7 @@ namespace PasswordChecker.Classes
     class PassChecker
     {
         private string password;
-        private string[] specialChar = { "~", "!", "@", "#", ".", "$", "%", "^", "&", "*", "-", "," };
+        private string[] specialChar = { "~", "!", "@", "#", ".", "$", "%", "^", "&", "*", "-", ",", "<", ">", ",", "/", "|", "\\"  };
         char[] UpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
         char[] LowerCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToLower().ToCharArray();
         char[] Nums = "1234567890".ToCharArray();
