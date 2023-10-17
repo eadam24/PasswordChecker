@@ -30,7 +30,7 @@ namespace PasswordChecker.Classes
 
         public string CheckPassword()
         {
-            if(password == null) { return "No password provided"; }
+            if(password == String.Empty) { return "No password provided"; }
 
             string result = string.Empty;
 

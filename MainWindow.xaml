@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PasswordChecker"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="500"
+        Title="MainWindow" Height="500" Width="600"
         ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -18,7 +18,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="160"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
